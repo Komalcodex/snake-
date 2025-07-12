@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #a5d72f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+  width: 90vmin;
+  height: 90vmin;
+  background: linear-gradient(to bottom right, #c0f0c0, #e2e6a0);
+  border: 3px solid #222;
+  position: relative;
+}
+
+.head {
+  background-color: darkgreen;
+  border-radius: 4px;
+}
+
+.snake {
+  background-color: green;
+  border-radius: 4px;
+}
+
+.food {
+  background-color: red;
+  border-radius: 50%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #a5d72f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+  width: 90vmin;
+  height: 90vmin;
+  background: linear-gradient(to bottom right, #c0f0c0, #e2e6a0);
+  border: 3px solid #222;
+  position: relative;
+}
+
+/* Snake Head - Stylish Snake Look */
+.head {
+  background-color: #2e7d32;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset -2px -2px 5px #144d1c;
+}
+
+/* Snake Eyes 👀 */
+.head::before,
+.head::after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+.head::before {
+  left: 25%;
+}
+.head::after {
+  right: 25%;
+}
+
+/* Snake Body - Smooth Look */
+.snake {
+  background: linear-gradient(45deg, #4caf50, #81c784);
+  border-radius: 20px;
+  box-shadow: inset -1px -1px 3px #2e7d32;
+}
+
+/* Food - Glowing Effect */
+.food {
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff4d4d;
+}
